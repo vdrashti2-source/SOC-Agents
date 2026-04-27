@@ -8,8 +8,6 @@
 
 <div align="center">
   
-  ![SOC Dashboard Demo](https://img.shields.io/badge/Live_Demo-Available-brightgreen)
-  ![Status](https://img.shields.io/badge/Status-Production_Ready-blue)
   
 </div>
 
