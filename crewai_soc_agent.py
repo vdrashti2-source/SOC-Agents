@@ -24,7 +24,7 @@ from crewai.tools import BaseTool
 load_dotenv()
 
 # ============================================================
-# CONFIGURATION - YOUR EXISTING .env VARIABLES
+# CONFIGURATION - EXISTING .env VARIABLES
 # ============================================================
 
 AZURE_TENANT_ID = os.getenv("AZURE_TENANT_ID")
@@ -38,7 +38,7 @@ VIRUSTOTAL_API_KEY = os.getenv("VIRUSTOTAL_API_KEY", "")
 ABUSEIPDB_API_KEY = os.getenv("ABUSEIPDB_API_KEY", "")
 
 # ============================================================
-# AZURE AUTHENTICATION - YOUR WORKING CONNECTION
+# AZURE AUTHENTICATION - WORKING CONNECTION
 # ============================================================
 
 credential = ClientSecretCredential(
@@ -59,7 +59,7 @@ print(f"✅ Data Source: SecurityIncident table (from your Analytic Rules)")
 print("=" * 70)
 
 # ============================================================
-# FETCH INCIDENTS USING KQL (RELIABLE - NO URL ISSUES)
+# FETCH INCIDENTS USING KQL 
 # ============================================================
 
 def fetch_sentinel_incidents(limit: int = 20, hours_back: int = 24) -> List[Dict]:
@@ -325,7 +325,7 @@ intake_agent = Agent(
     3. Determine the priority and true severity
     4. Extract key entities and indicators
     
-    Your Analytic Rules detected these incidents. Now YOU analyze them
+    Analytic Rules detected these incidents. Now YOU analyze them
     using your cybersecurity expertise.""",
     llm=llm,
     tools=[get_incidents_tool],
